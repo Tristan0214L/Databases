@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "508791848003",
+    "firebase_url": "https://unity-test-class-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "unity-test-class",
+    "storage_bucket": "unity-test-class.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:508791848003:android:fd95ae42ee6e723a6d28f6",
+        "android_client_info": {
+          "package_name": "com.example.vegaschool"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgqK48uKKZhTksd-9T2YSqm98nYkNmqS8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
