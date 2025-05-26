@@ -11,7 +11,9 @@
 **/[Bb]uild/
 **/[Bb]uilds/
 **/[Ll]ogs/
-**/[Ff]irebase/
+Assets/[Ff]irebase/
+**/[Ee]ditor Default Resources/
+
 
 
 # MemoryCaptures can get excessive in size.
