@@ -23,7 +23,7 @@ public class DatabaseManager : MonoBehaviour
 
     public PlayerProfile loadedProfile;
 
-    public void Save(PlayerProfile profile)
+    public async Task Save(PlayerProfile profile)
     {
         switch (mode)
         {
@@ -35,11 +35,12 @@ public class DatabaseManager : MonoBehaviour
                 break;
 
             case SavingModes.Cloud:
-                cloudSaveManager.SavePlayerData(profile);
+                Debug.Log("Using Cloud Save");
+                await cloudSaveManager.SavePlayerData(profile);
                 break;
 
             case SavingModes.Firebase:
-                firebaseSaveManager.SavePlayerData(profile);
+                await firebaseSaveManager.SavePlayerData(profile);
                 break;
 
             default:
@@ -47,7 +48,7 @@ public class DatabaseManager : MonoBehaviour
         }
     }
 
-    public void Load()
+    public async Task Load()
     {
         switch (mode)
         {
@@ -59,12 +60,14 @@ public class DatabaseManager : MonoBehaviour
                 break;
 
             case SavingModes.Cloud:
-                cloudSaveManager.LoadPlayerData();
+                Debug.Log("Using Cloud Load");
+
+                await cloudSaveManager.LoadPlayerData();
                 loadedProfile = cloudSaveManager.tempLoad;
                 break;
 
             case SavingModes.Firebase:
-                firebaseSaveManager.LoadPlayerData();
+                await firebaseSaveManager.LoadPlayerData();
                 loadedProfile = firebaseSaveManager.tempLoad;
                 break;
 

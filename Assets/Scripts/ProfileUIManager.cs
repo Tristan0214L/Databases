@@ -36,8 +36,10 @@ public class ProfileUIManager : MonoBehaviour
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public async Task Start()
     {
+        await Task.Delay(1000);
+        //On startup create our dropdown
         colourDropdown.ClearOptions();
         List<string> options = new List<string>();
 
@@ -48,8 +50,8 @@ public class ProfileUIManager : MonoBehaviour
 
         colourDropdown.AddOptions(options);
 
-
-        LoadData();
+        //if there is data please load
+        await LoadData();
         
 
         if (playerProfile != null)
@@ -63,6 +65,7 @@ public class ProfileUIManager : MonoBehaviour
         }
 
         colourDropdown.onValueChanged.AddListener(OnColourChanged);
+        
         saveButton.onClick.AddListener(CallSave);
 
 
@@ -73,9 +76,10 @@ public class ProfileUIManager : MonoBehaviour
     {
         colourDisplay.color = availableColours[index];
     }
-    void LoadData()
+    async Task LoadData()
     {
-        databaseManager.Load();
+        await databaseManager.Load();
+
         playerProfile = databaseManager.loadedProfile;
        
     }
@@ -83,15 +87,17 @@ public class ProfileUIManager : MonoBehaviour
     {
         SaveData();
     }
-    void SaveData()
+    async Task SaveData()
     {
+        
+
         var data = new PlayerProfile(
             nameInput.text,
             availableColours[colourDropdown.value]
             );
 
         playerProfile = data;
-        databaseManager.Save( playerProfile );
+        await databaseManager.Save( playerProfile );
         Debug.Log("Saved");
         
     }

@@ -22,9 +22,9 @@ public class CloudSaveManager : MonoBehaviour
         await CloudSaveService.Instance.Data.Player.SaveAsync(data);
     }
 
-    public async Task
-    LoadPlayerData()
+    public async Task LoadPlayerData()
     {
+
         string playerNameValue = "DefaultPlayer";
         Color colourTemp = Color.white;
         string colourString = "#ffffff";

@@ -939,7 +939,7 @@ MonoBehaviour:
   localSaveManager: {fileID: 1731025814}
   cloudSaveManager: {fileID: 1062309803}
   firebaseSaveManager: {fileID: 860580580}
-  mode: 0
+  mode: 2
   loadedProfile:
     playerName: 
     favouriteColourHex: 
@@ -1449,7 +1449,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 860580578}
-  - component: {fileID: 860580579}
   - component: {fileID: 860580580}
   m_Layer: 0
   m_Name: Firebase
@@ -1473,18 +1472,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 390161934}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &860580579
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 860580577}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1188aa68a6b101f48889db5430e80b06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &860580580
 MonoBehaviour:
   m_ObjectHideFlags: 0
