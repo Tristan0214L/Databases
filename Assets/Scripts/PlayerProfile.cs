@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 //to allow unity to view such classes as VARIABLES (in engine), we make the class serializable
@@ -6,6 +7,9 @@ public class PlayerProfile
 {
     public string playerName;
     public string favouriteColourHex;
+
+    public List<DiaryEntry> diaryEntries;
+    
 
     public PlayerProfile(string name, Color color)
     {

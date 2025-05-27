@@ -64,6 +64,8 @@
     <Compile Include="Assets\Scripts\Cloud\UGSInitializer.cs" />
     <Compile Include="Assets\Scripts\DatabaseManager.cs" />
     <Compile Include="Assets\Scripts\PlayerProfile.cs" />
+    <Compile Include="Assets\Scripts\DiaryUIManager.cs" />
+    <Compile Include="Assets\Scripts\DiaryEntry.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\Local\LocalSaveManager.cs" />
     <Compile Include="Assets\Scripts\Cloud\CloudSaveManager.cs" />
